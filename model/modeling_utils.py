@@ -7,11 +7,13 @@ import logging
 import torch
 import torch.nn.functional as F
 
-from pytorch_transformers.modeling_bert import (BertConfig,
-        load_tf_weights_in_bert, BERT_PRETRAINED_MODEL_ARCHIVE_MAP,
-        BertPreTrainedModel)
-from pytorch_transformers.modeling_utils import (PreTrainedModel,
-    WEIGHTS_NAME, TF_WEIGHTS_NAME)
+from pytorch_transformers.modeling_bert import (
+                                                BertConfig,
+                                                load_tf_weights_in_bert,
+                                                BERT_PRETRAINED_MODEL_ARCHIVE_MAP,
+                                                BertPreTrainedModel
+                                                )
+from pytorch_transformers.modeling_utils import (PreTrainedModel,WEIGHTS_NAME, TF_WEIGHTS_NAME)
 from pytorch_transformers.file_utils import cached_path
 
 

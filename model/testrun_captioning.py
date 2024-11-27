@@ -11,6 +11,7 @@ import torch.distributed as dist
 from torch.utils.data import Dataset
 from tqdm import tqdm
 
+
 from oscar.utils.logger import setup_logger
 from oscar.utils.tsv_file import TSVFile
 from oscar.utils.tsv_file_ops import (tsv_writer, concat_tsv_files,
@@ -19,9 +20,11 @@ from oscar.utils.misc import (mkdir, set_seed,
         load_from_yaml_file, find_file_path_in_yaml)
 from oscar.utils.caption_evaluate import (evaluate_on_coco_caption,
         ScstRewardCriterion)
-from oscar.utils.cbs import ConstraintFilter, ConstraintBoxesReader
-from oscar.utils.cbs import FiniteStateMachineBuilder
-from oscar.modeling.modeling_bert import BertForImageCaptioning
+
+
+from cbs import ConstraintFilter, ConstraintBoxesReader
+from cbs import FiniteStateMachineBuilder
+from modeling_bert import BertForImageCaptioning
 from transformers.pytorch_transformers import BertTokenizer, BertConfig
 from transformers.pytorch_transformers import AdamW, WarmupLinearSchedule, WarmupConstantSchedule
 from tokenizer import CaptionTensorizer
